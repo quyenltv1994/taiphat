@@ -1,0 +1,250 @@
+.footer{
+  &__top{
+    padding:50px 0;
+    background: #F3F3F4;
+    @media screen and (min-width: $tablet-medium){
+      padding:50px 0 60px;
+    }
+    &--container{
+      &>p:first-child{
+        font-size: 20px;
+        font-weight: 300;
+        padding-left: 20px;
+        text-align: center;
+        @media screen and (min-width: $tablet-medium2) {
+          text-align: inherit;
+        }
+      }
+    }
+    &--main{
+      @include flex;
+      flex-wrap: wrap;
+      padding:10px 0;
+      .tele {
+        width: 100%;
+        color: $dark;
+        font-size: 25px;
+        font-family: $font-2;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: center;
+        @media screen and (min-width: $tablet-medium) {
+          display: inline-block;
+        }
+        @media screen and (min-width: $tablet-medium2) {
+          width: 50%;
+        }
+        div{
+          position: relative;
+          display: inline-block;
+          padding-left: 40px;
+          &:before{
+            content:"";
+            background-image: url(../images/tele-icon-footer.png);
+            background-repeat: no-repeat;
+            width: 31px;
+            height:31px;
+            position: absolute;
+            top:15px;
+            left:0;
+          }
+        }
+      }
+      .email {
+        width: 100%;
+        display: inline-block;
+        font-family: $font-2;
+        color:$dark;
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 60px;
+        text-align: center;
+        @media screen and (min-width: $tablet-medium2) {
+          width: 50%;
+        }
+        div{
+          position: relative;
+          display: inline-block;
+          padding-left: 50px;
+          &:before{
+            content:"";
+            background-image: url(../images/email-icon-foot.png);
+            background-repeat: no-repeat;
+            width: 40px;
+            height:31px;
+            position: absolute;
+            top:15px;
+            left:0;
+          }
+        }
+        a{
+          position: relative;
+          &:before{
+            width: 100%;
+            height: 1px solid $dark;
+            position: absolute;
+            left:0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    &--content{
+      padding:25px 0;
+      background: #FDC816;
+      @include flex;
+      flex-wrap: wrap;
+      @media screen and (min-width: $tablet-small){
+        padding:25px 50px;
+      }
+      .left{
+        @include flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 35px 0 20px;
+        margin:0 auto 20px;
+        width: 300px;
+        @media screen and (min-width: $desktop-small){
+          margin:0;
+          border-right: 1px solid $dark;
+        }
+        @media screen and (min-width: $desktop-medium){
+          width: 350px;
+        }
+        p{
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      .right{
+        align-items: center;
+        width: 100%;
+        @media screen and (min-width: $tablet-medium){
+          @include flex;
+        }
+        @media screen and (min-width: $desktop-small){
+          width: calc(100% - 300px);
+        }
+        @media screen and (min-width: $desktop-medium){
+          width: calc(100% - 350px);
+        }
+        &>p:first-child{
+          font-size: 13px;
+          font-family: $font-3;
+          padding:0 20px;
+          width: 100%;
+          line-height: 20px;
+          text-align: center;
+          margin-bottom: 20px;
+          @media screen and (min-width: $tablet-medium){
+            width: 260px;
+            text-align: inherit;
+            margin-bottom: 0;
+          }
+        }
+        .form{
+          padding-right: 15px;
+          @media screen and (min-width: $tablet-small){ 
+            width: 100%;
+            margin:0 auto;
+          }
+          @media screen and (min-width: $tablet-medium){
+            width: calc(100% - 260px);
+          }
+          input[type='email']{
+            width: calc(100% - 134px);
+            height:45px;
+            border:1px solid $dark;
+            background: $white;
+            margin:0 15px;
+            padding:0 10px;
+          }
+          input[type='submit']{
+            font-size: 13px;
+            font-family: $font-3;
+            color:$white;
+            width: 100px;
+            height:45px;
+            text-align: center;
+            line-height: 45px;
+            background: $dark;
+            transition: all 1s;
+            &:hover{
+              background: rgba($dark, .9);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom{
+    line-height: 40px;
+    background: #D5D5D5;
+    @media screen and (min-width: $desktop-medium){
+      height:40px;
+    }
+    .wrapper{
+      @media screen and (min-width: $tablet-medium){
+        padding:0 15px;
+      }
+    }
+    &--container{
+      @include flex;
+      flex-wrap: wrap;
+      font-size: 12px;
+      @media screen and (min-width: $tablet-small){
+        font-size: 13px;
+      }
+      .company__name{
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        @media screen and (min-width: $desktop-medium){
+          width: calc(100% - 535px - 170px);
+          text-align: inherit;
+        }
+      }
+      .location{
+        font-family: $font-3;
+        width: 100%;
+        text-align: center;
+        line-height: 15px;
+        @media screen and (min-width: $tablet-medium){
+          width: calc(100% - 200px);
+          text-align: inherit;
+          line-height: inherit;
+        }
+        @media screen and (min-width: $desktop-medium){
+          width: 535px;
+        }
+        div{
+          @media screen and (min-width: $tablet-small) {
+            display: inline-block;
+            padding-left: 15px;
+            background: url(../images/location.png) left center no-repeat;
+          }
+        }
+      }
+      .tax__number{
+        font-family: $font-3;
+        width: 100%;
+        text-align: center;
+        @media screen and (min-width: $tablet-medium){
+          width: 170px;
+          text-align: right;
+        }
+        @media screen and (min-width: $desktop-medium){
+          text-align: inherit;
+        }
+        div{
+          @media screen and (min-width: $tablet-small) {
+            display: inline-block;
+            padding-left: 19px;
+            background: url(../images/tax-icon.png) left center no-repeat;
+          }
+        }
+      }
+    }
+  }
+}

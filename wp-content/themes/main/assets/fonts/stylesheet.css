@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans-Light.eot');
+    src: url('OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('OpenSans-Light.woff2') format('woff2'),
+        url('OpenSans-Light.woff') format('woff'),
+        url('OpenSans-Light.ttf') format('truetype'),
+        url('OpenSans-Light.svg#OpenSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-LightItalic.eot');
+    src: url('Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-LightItalic.woff2') format('woff2'),
+        url('Roboto-LightItalic.woff') format('woff'),
+        url('Roboto-LightItalic.ttf') format('truetype'),
+        url('Roboto-LightItalic.svg#Roboto-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-BoldItalic.eot');
+    src: url('Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-BoldItalic.woff2') format('woff2'),
+        url('Roboto-BoldItalic.woff') format('woff'),
+        url('Roboto-BoldItalic.ttf') format('truetype'),
+        url('Roboto-BoldItalic.svg#Roboto-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Light.eot');
+    src: url('Averta-Light.eot?#iefix') format('embedded-opentype'),
+        url('Averta-Light.woff2') format('woff2'),
+        url('Averta-Light.woff') format('woff'),
+        url('Averta-Light.ttf') format('truetype'),
+        url('Averta-Light.svg#Averta-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Bold.eot');
+    src: url('Averta-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Averta-Bold.woff2') format('woff2'),
+        url('Averta-Bold.woff') format('woff'),
+        url('Averta-Bold.ttf') format('truetype'),
+        url('Averta-Bold.svg#Averta-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Regular.eot');
+    src: url('Averta-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Averta-Regular.woff2') format('woff2'),
+        url('Averta-Regular.woff') format('woff'),
+        url('Averta-Regular.ttf') format('truetype'),
+        url('Averta-Regular.svg#Averta-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Averta';
+    src: url('Averta-Semibold.eot');
+    src: url('Averta-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Averta-Semibold.woff2') format('woff2'),
+        url('Averta-Semibold.woff') format('woff'),
+        url('Averta-Semibold.ttf') format('truetype'),
+        url('Averta-Semibold.svg#Averta-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+

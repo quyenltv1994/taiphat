@@ -1,0 +1,204 @@
+//============================================================
+// Clearfix
+//============================================================
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+/*
+.clearfix {
+  @include clearfix;
+}
+*/
+
+//============================================================
+// Forms
+//============================================================
+
+@mixin placeholder {
+  @at-root #{&}::-webkit-input-placeholder {
+    @content
+  }
+  @at-root #{&}:-moz-placeholder {
+    @content
+  }
+  @at-root #{&}::-moz-placeholder {
+    @content
+  }
+  @at-root #{&}:-ms-input-placeholder {
+    @content
+  }
+  @at-root #{&}:placeholder-shown {
+    @content
+  }
+  @at-root #{&}::placeholder {
+    @content
+  }
+}
+
+/*
+input {
+  @include placeholder {
+    font-style:italic;
+  }
+}
+*/
+
+//============================================================
+// Typography
+//============================================================
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+p {
+  @include text-ellipsis;
+}
+*/
+
+/* Box shadow
+----------------------------------------------------------------------------------------------------*/
+@mixin box-shadow($top, $left, $blur, $color, $inset:'') {
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+/* How to use it
+
+@include box-shadow(0, 5px, 15px, 0, rgba(0, 0, 0, 0.2));
+----------------------------------------------------------------------------------------------------*/
+
+/* Border radius
+----------------------------------------------------------------------------------------------------*/
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+/* How to use it
+
+@include border-radius(50%);
+@include border-radius(10px);
+----------------------------------------------------------------------------------------------------*/
+
+/* Display flex
+----------------------------------------------------------------------------------------------------*/
+@mixin flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* How to use it
+
+@include flex;
+----------------------------------------------------------------------------------------------------*/
+
+@mixin displayflex {
+  display: flex;
+}
+
+/* Hover
+----------------------------------------------------------------------------------------------------*/
+@mixin hover() {
+  &:hover, &:active, &:focus {
+    @content;
+  }
+}
+
+/* How to use it
+
+@include hover {
+  //properties
+}
+----------------------------------------------------------------------------------------------------*/
+
+/* Opacity
+----------------------------------------------------------------------------------------------------*/
+@mixin opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity='+$IEValue+')';
+  filter: alpha(opacity=$IEValue);
+}
+
+/* How to use it
+
+@include opacity(0);
+@include opacity(.3);
+@include opacity(1);
+----------------------------------------------------------------------------------------------------*/
+
+@mixin transition($transition...) {
+  transition: $transition;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+}
+
+/* Rotation
+----------------------------------------------------------------------------------------------------*/
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+/* How to use it
+
+@include rotate(0);
+@include rotate(45);
+@include rotate(-45);
+----------------------------------------------------------------------------------------------------*/
+
+/* Scale
+----------------------------------------------------------------------------------------------------*/
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+/* How to use it
+
+@include scale(1);
+@include scale(1.5);
+----------------------------------------------------------------------------------------------------*/
+
+/* Size
+----------------------------------------------------------------------------------------------------*/
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/* How to use it
+
+@include size(26px, 22px);
+----------------------------------------------------------------------------------------------------*/
+
+/* Transform origin
+----------------------------------------------------------------------------------------------------*/
+@mixin transform-origin($origin) {
+  transform-origin: $origin;
+}
+
+/* How to use it
+
+@include transform-origin(20% 40%);
+----------------------------------------------------------------------------------------------------*/
+
+@keyframes animate-width {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+

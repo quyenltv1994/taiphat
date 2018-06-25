@@ -1,0 +1,136 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - css_files
+ * - css_url
+ * - js_url
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - favicon_color
+ *
+ */
+#}
+
+{% set random = random(99999999999) %}
+{% set page_description = 'Page description' %}
+<!DOCTYPE html><!--[if IE ]>
+<html class="ie" lang="{{ lang_code }}" dir="ltr"><![endif]--><!--[if !(IE)]><! -->
+<html lang="{{ lang_code }}" dir="ltr">
+    <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="initial-scale=1.0,width=device-width,height=device-height,shrink-to-fit=no">
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="google" content="notranslate"/>
+        <meta name="og:type" content="website">
+        <!--[if (IEMobile)]>
+        <meta http-equiv="cleartype" content="on">
+        <![endif]-->
+        <title>{{ project_name }}</title>
+        <meta name="og:title" content="{{ project_name }}">
+        <meta name="og:site_name" content="{{ project_name }}">
+        <meta name="description" content="{{ page_description }}">
+        <meta name="og:description" content="{{ page_description }}">
+        <meta name="image" content="{{ img_url }}screenshot.png?{{ random }}">
+        <meta name="og:image" content="{{ img_url }}screenshot.png?{{ random }}">
+        {% if (favicon_url) %}
+            <link rel="apple-touch-icon" sizes="114x114" href="{{ favicon_url }}apple-touch-icon-114x114.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="120x120" href="{{ favicon_url }}apple-touch-icon-120x120.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="144x144" href="{{ favicon_url }}apple-touch-icon-144x144.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="152x152" href="{{ favicon_url }}apple-touch-icon-152x152.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_url }}apple-touch-icon-180x180.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="57x57" href="{{ favicon_url }}apple-touch-icon-57x57.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="60x60" href="{{ favicon_url }}apple-touch-icon-60x60.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="72x72" href="{{ favicon_url }}apple-touch-icon-72x72.png?{{ random }}">
+            <link rel="apple-touch-icon" sizes="76x76" href="{{ favicon_url }}apple-touch-icon-76x76.png?{{ random }}">
+            <link rel="apple-touch-startup-image" href="{{ favicon_url }}apple-touch-icon.png?{{ random }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ favicon_url }}favicon-16x16.png?{{ random }}">
+            <link rel="icon" type="image/png" sizes="228x228" href="{{ favicon_url }}coast-228x228.png?{{ random }}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon_url }}favicon-32x32.png?{{ random }}">
+            <link rel="manifest" href="{{ favicon_url }}manifest.json?{{ random }}">
+            <link rel="shortcut icon" href="{{ favicon_url }}favicon.ico?{{ random }}">
+            <link rel="yandex-tableau-widget" href="{{ favicon_url }}yandex-browser-manifest.json?{{ random }}">
+            <meta name="msapplication-TileImage" content="{{ favicon_url }}mstile-144x144.png?{{ random }}">
+            <meta name="msapplication-config" content="{{ favicon_url }}browserconfig.xml?{{ random }}">
+            <meta name="theme-color" content="{{ favicon_color }}">
+            <meta name="msapplication-TileColor" content="{{ favicon_color }}">
+            <meta name="apple-mobile-web-app-title" content="{{ project_name }}">
+            <meta name="apple-mobile-web-app-capable" content="yes">
+            <meta name="mobile-web-app-capable" content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+            <meta name="application-name" content="{{ project_name }}">
+        {% endif %}
+        <!--
+        <meta name="fb:app_id" content="123456789">
+        <meta name="og:url" content="http://google.fr/">
+        <link rel="canonical" href="http://google.fr/"/>
+        <link rel="alternate" href="http://google.com/" hreflang="en"/>
+        <meta name="google-site-verification" content="..."/>
+        <meta name="og:locale" content="fr_FR">
+        -->
+        {% for css_file in css_files %}
+            {% if css_file.name == 'print' %}
+                <link rel="stylesheet" href="{{ css_file.url }}?{{ random }}" type="text/css" media="print"/>
+            {% elseif (css_file.name != 'gulp-index') %}
+                <link rel="stylesheet" href="{{ css_file.url }}?{{ random }}" type="text/css" media="not print"/>
+            {% endif %}
+        {% endfor %}
+        <script src="../../../../gulp-includes/js/libs/jquery/jquery.min.js" defer></script>
+        <script src="../../../../gulp-includes/js/modernizr.custom.js" defer></script>
+        <script src="../../../../gulp-includes/js/classie.js" defer></script>
+        {% if js_url %}
+            <script src="{{ js_url.url }}?{{ random }}" defer></script>
+        {% endif %}
+        <script src="../../../../gulp-includes/js/progressButton.js" defer></script>
+    </head>
+    <body class="{{ bodyclass }}">
+        <div id="main" class="main">
+            <header id="header" class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+                <div class="button__menu-container">
+                    <div class="button__menu-container__open">
+                        <button class="button__menu-open">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="button__menu-container__close">
+                        <button class="button__menu-close"></button>
+                    </div>
+                </div>
+                <div class="wrapper-fullwidth">
+                    <div class="header__logo">
+                        <a href="#" class="header__logo-link">
+                            <img src="{{ img_url }}logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header__menu">
+                        <nav id="menu" class="menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                            <ul>
+                                <li class="current-menu-item" itemprop="url"><a href="#" itemprop="name">Trang Chủ</a></li>
+                                <li itemprop="url"><a href="#" itemprop="name">Giới Thiệu</a></li>
+                                <li itemprop="url"><a href="#" itemprop="name">Dịch Vụ</a></li>
+                                <li itemprop="url"><a href="#" itemprop="name">Liên Hệ</a></li>
+                            </ul>
+                        </nav>
+                        <a href="" class="read__article">
+								<span>
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/images/arrow.png" alt="">
+								</span>
+                        </a>
+                    </div>
+                    <div class="header__right">
+                        <div class="tele"><a href="">0932.09.68.90</a> - <a href="" title="">0166.247.0286</a></div>
+                        <div class="email">
+                            <a href="">vesinhdaiphat2018@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main id="main__content" class="main__content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">

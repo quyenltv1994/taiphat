@@ -1,0 +1,182 @@
+.banner{
+  margin-bottom: 90px;
+  .flexslider{
+    border:none;
+    .slides{
+      li{
+        position: relative;
+        min-height: 500px;
+        background-size: cover !important;
+        @media screen and (min-width: $desktop-small){
+          height: auto;
+        }
+        img{
+          display: none;
+          @media screen and (min-width: $desktop-small){
+            display: block;
+          }
+        }
+      }
+      &__item{
+        &--content{
+          width: 510px;
+          height:130px;
+          padding:38px 45px;
+          font-size: 30px;
+          color:$white;
+          font-weight: 700;
+          background: rgba($dark, .5);
+        }
+      }
+    }
+    .flex-control-nav{
+      width: auto;
+      right:10%;
+      bottom: 45px;
+      li{
+        padding:4px;
+        position: relative;
+        a{
+          background: #838d97;
+          height:14px;
+          width: 14px;
+          box-shadow: none;
+          position: relative;
+          z-index: 1;
+          &.flex-active{
+            background: $white;
+            &+span{
+              display: block;
+              width: 22px;
+              height: 22px;
+              border: 1px solid #fff;
+              border-radius: 50%;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+          &:hover{
+            background: #838d97;
+            height:14px;
+            width: 14px;
+          }
+        }
+        &:hover{
+          a{
+            background: $white;
+          }
+          span{
+            display: block;
+            width: 22px;
+            height: 22px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+  &__item{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    &--content{
+      display: inline-block;
+    }
+  }
+}
+.slogan{
+  &__home{
+    margin-bottom: 75px;
+    @media screen and (min-width: $desktop-small){
+      margin-bottom: 100px;
+    }
+    &--main{
+      @include flex;
+      text-align: center;
+      @media screen and (min-width: $tablet-medium2){
+        background: url(../images/bg.png) left bottom no-repeat;
+        background-size: 100% auto;
+        padding:0 15px 15px;
+      }
+      @media screen and (min-width: $desktop-small){
+        padding:0 40px 40px;
+      }
+      .image{
+        margin-right: 15px;
+        width: 100%;
+        background: url(../images/bg.png) left bottom no-repeat;
+        padding:0 40px 65px;
+        text-align: center;
+        @media screen and (min-width: $tablet-medium2){
+          width: calc(55% - 15px);
+          padding:0;
+          background: none;
+        }
+        img{
+          display: inline;
+          @media screen and (min-width: $tablet-medium2){
+            display: block;
+          }
+        }
+      }
+    }
+    &--content{
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      text-align: center;
+      line-height: 20px;
+      @media screen and (min-width: $tablet-medium2) {
+        text-align: inherit;
+        margin-top: 75px;
+        width: 45%;
+        &:before{
+          content: "";
+          width: 32px;
+          height: 5px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: #fdc816;
+        }
+      }
+      h2{
+        font-size: 25px;
+        font-weight: 700;
+        padding:35px 0;
+      }
+      .description{
+        font-family: $font-3;
+        font-size: 15px;
+        margin-bottom: 35px;
+      }
+      p{
+        a{
+          display: inline-block;
+          border:20px solid rgba(#FDC816, .3);
+          border-radius: 50%;
+          transition: 1s all;
+          span{
+            width: 40px;
+            height: 40px;
+            display: block;
+            background: #FDC816;
+            @include flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+          }
+          &:hover{
+            border:20px solid rgba(#FDC816, .5);
+          }
+        }
+      }
+    }
+  }
+}

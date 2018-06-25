@@ -1,0 +1,106 @@
+.paging {
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  line-height: 50px;
+  @media screen and (min-width: $tablet-medium) {
+    border-top: 1px solid $color1;
+  }
+  .inner {
+    display: block;
+    margin: 0 auto;
+    @include clearfix;
+  }
+  .paginationjs-pages {
+    display: block;
+    margin: 0 auto;
+    @include clearfix;
+  }
+  ul {
+    li {
+      display: inline-block;
+      &:nth-child(6),
+      &:nth-child(7) {
+        display: none;
+        @media screen and (min-width: $tablet-medium) {
+          display: inline-block;
+        }
+      }
+      a {
+        color: $textcolor-1;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        width: auto;
+        height: 34px;
+        line-height: 34px;
+        border-radius: 50%;
+        background: $grey;
+        padding: 0 7px;
+        @include transition (all .3s ease);
+        //@include hover{
+        //color: $white;
+        //background: $red;
+        //}
+
+        //@include hover{
+        //  &:not(.active) {
+        //
+        //  }
+        //}
+        @media screen and (min-width: $desktop-small) {
+          padding: 0 10px;
+        }
+        i {
+          font-size: 11px;
+        }
+
+      }
+      &.pre, &.paginationjs-prev {
+        position: absolute;
+        left: 0;
+        @media screen and (min-width: $tablet-medium) {
+          left: 30px;
+        }
+        a {
+          border: 1px solid $color1;
+          width: 50px;
+          height: 50px;
+          line-height: 43px;
+          padding-bottom: 5px;
+          @include hover {
+            color: $white;
+            background: $red;
+          }
+        }
+      }
+      &.next, &.paginationjs-next {
+        position: absolute;
+        right: 0;
+        @media screen and (min-width: $tablet-medium) {
+          right: 30px;
+        }
+        a {
+          border: 1px solid $color1;
+          width: 50px;
+          height: 50px;
+          line-height: 43px;
+          padding-bottom: 5px;
+          @include hover {
+            color: $white;
+            background: $red;
+          }
+        }
+      }
+      &.is-active, &.active {
+        a {
+          color: $white;
+          background: $red;
+          width: 34px;
+        }
+      }
+    }
+  }
+}
+

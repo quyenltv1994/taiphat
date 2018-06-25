@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<!--[if IE ]>
+<html class="ie" lang="fr" dir="ltr"><![endif]-->
+<!--[if !(IE)]><! -->
+<html lang="fr" dir="ltr">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0,width=device-width,height=device-height,shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate" />
+    <meta name="og:type" content="website">
+    <!--[if (IEMobile)]>
+        <meta http-equiv="cleartype" content="on">
+        <![endif]-->
+    <title>EZI-X</title>
+    <meta name="og:title" content="EZI-X">
+    <meta name="og:site_name" content="EZI-X">
+    <meta name="description" content="Page description">
+    <meta name="og:description" content="Page description">
+    <meta name="image" content="../images/screenshot.png?82710691913">
+    <meta name="og:image" content="../images/screenshot.png?82710691913">
+    <!--
+        <meta name="fb:app_id" content="123456789">
+        <meta name="og:url" content="http://google.fr/">
+        <link rel="canonical" href="http://google.fr/"/>
+        <link rel="alternate" href="http://google.com/" hreflang="en"/>
+        <meta name="google-site-verification" content="..."/>
+        <meta name="og:locale" content="fr_FR">
+        -->
+    <link rel="stylesheet" href="../css/main.css?82710691913" type="text/css" media="not print" />
+    <link rel="stylesheet" href="../css/print.css?82710691913" type="text/css" media="print" />
+    <script src="../../../../gulp-includes/js/libs/jquery/jquery.min.js" defer></script>
+    <script src="../../../../gulp-includes/js/modernizr.custom.js" defer></script>
+    <script src="../../../../gulp-includes/js/classie.js" defer></script>
+    <script src="../js/main.js?82710691913" defer></script>
+    <script src="../../../../gulp-includes/js/progressButton.js" defer></script>
+</head>
+
+<body class="page-recherche">
+    <div id="main" class="main">
+        <header id="header" class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+            <div class="button__menu-container">
+                <div class="button__menu-container__open"> <button class="button__menu-open">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button> menu </div>
+                <div class="button__menu-container__close"> <button class="button__menu-close"></button> </div>
+            </div>
+            <div class="wrapper-fullwidth">
+                <div class="header__logo"> <a href="#" class="header__logo-link">
+                            <img src="../images/logo.png" alt="">
+                        </a> </div>
+                <div class="header__menu">
+                    <nav id="menu" class="menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        <ul>
+                            <li itemprop="url"> <a href="01-home.php" itemprop="name">Acheter</a> </li>
+                            <li class="current-menu-item" itemprop="url"><a href="#" itemprop="name">Louer</a></li>
+                            <li itemprop="url"><a href="#" itemprop="name">Estimation</a></li>
+                            <li itemprop="url"><a href="#" itemprop="name">Agents</a></li>
+                            <li itemprop="url"><a href="#" itemprop="name">Actualités</a></li>
+                            <li itemprop="url"><a href="#" itemprop="name">Contact</a></li>
+                            <li class="mon-espace-mobile">
+                                <div class="mon-espace-mobile__inner">
+                                    <div class="tele">+33 (0) 1 43 06 04 00</div>
+                                    <div class="wrap-btn-espace"> <a href="" class="btn-espace">Mon espace</a> </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__right">
+                    <div class="tele">+33 (0) 1 43 06 04 00</div>
+                    <div class="wrap-btn-espace"> <a href="" class="btn-espace">Mon espace</a> </div>
+                </div>
+            </div>
+        </header>
+        <main id="main__content" class="main__content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+            <div class="clearfix wrapper-fullwidth">
+                <div class="action-search">
+                    <div class="type-search">
+                        <div class="inner">
+                            <div class="type-search__list"> <select class="achat">
+                        <option value="0">Achat</option>
+                        <option value="1">Location</option>
+                        <option value="2">Vendu récemment</option>
+                        <option value="3">Loué récemment</option>
+                    </select> </div>
+                            <div class="type-search__list2">
+                                <div class="searchlien"> <input class="inputlien" placeholder="Search..."> <button class="btn-lien"><i class="icon-arrow-down"></i></button> </div>
+                            </div>
+                            <div class="type-search__list list-type-de-bien"> <select multiple="multiple" class="type-de-bien">
+                        <option value="0">Maison</option>
+                        <option value="1">Terrain</option>
+                        <option value="2">Bâtiment</option>
+                        <option value="3">Bureau(x)</option>
+                        <option value="0">Appartement</option>
+                        <option value="1">Loft/Atelier/Surf...</option>
+                        <option value="2">Château</option>
+                        <option value="3">Hôtel Particulier</option>
+                        <option value="0">Parking/Box</option>
+                        <option value="1">Commerce</option>
+                        <option value="2">Local</option>
+                        <option value="3">Autres</option>
+                    </select> </div>
+                            <div class="type-search__list"> <button class="btn btn-budget">Budget</button>
+                                <div class="frame-budget">
+                                    <div class="frame-budget__inner">
+                                        <div class="frame-budget__left">
+                                            <div class="label">De</div>
+                                            <div class="wrap-input-price"> <input class="input-price" placeholder="€"> </div>
+                                        </div>
+                                        <div class="frame-budget__right">
+                                            <div class="label">à</div>
+                                            <div class="wrap-input-price"> <input class="input-price" placeholder="€"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-search__list"> <select multiple="multiple" class="nb-de-pieces">
+                        <option value="0">Nb de pièces</option>
+                        <option value="1">Nb de pièces2</option>
+                        <option value="2">Nb de pièces3</option>
+                        <option value="3">Nb de pièces4</option>
+                    </select> </div>
+                            <div class="type-search__plus"> <button class="btn btn-de-criteres"><span class="plus-minus"></span>de critères</button> </div>
+                            <div class="type-search__alerte"> <button class="progress-button btn btn-alerte" data-style="top-line" data-horizontal>Créer une alerte <i class="icon-alarm"></i></button> </div>
+                        </div>
+                        <div class="inner innerbt">
+                            <div class="type-search__list"> <select multiple="multiple" class="chambres">
+                        <option value="0">1 chambre</option>
+                        <option value="1">2 chambres</option>
+                        <option value="2">3 chambres</option>
+                        <option value="3">4 chambres</option>
+                        <option value="4">5 chambres</option>
+                    </select> </div>
+                            <div class="type-search__list"> <button class="btn btn-surface">Surface</button>
+                                <div class="frame-surface">
+                                    <div class="frame-surface__inner">
+                                        <div class="frame-surface__left">
+                                            <div class="label">De</div>
+                                            <div class="wrap-input-price"> <input class="input-price" placeholder="m2"> </div>
+                                        </div>
+                                        <div class="frame-surface__right">
+                                            <div class="label">à</div>
+                                            <div class="wrap-input-price"> <input class="input-price" placeholder="m2"> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-search__list list-commodites"> <select multiple="multiple" class="commodites">
+                        <option value="0">Terrasse</option>
+                        <option value="1">Parking ouvert</option>
+                        <option value="2">Cheminée</option>
+                        <option value="3">Rez-de-chaussée</option>
+                        <option value="3">Placard</option>
+                        <option value="3">Gardien</option>
+                        <option value="3">Balcon</option>
+                        <option value="3">Box</option>
+                        <option value="3">Parquet</option>
+                        <option value="3">Dernier étage</option>
+                        <option value="3">Interphone</option>
+                        <option value="3">Alarme</option>
+                        <option value="3">Jardin</option>
+                        <option value="3">Cave</option>
+                        <option value="3">Ascenseur</option>
+                        <option value="3">Piscine</option>
+                        <option value="3">Digicode</option>
+                        <option value="3">Accès handicapé</option>
+                    </select> </div>
+                            <div class="type-search__list"> <select multiple="multiple" class="cuisine">
+                        <option value="0">Séparée</option>
+                        <option value="1">Américaine</option>
+                        <option value="2">Coin cuisine</option>
+                        <option value="3">Équipée</option>
+                    </select> </div>
+                            <div class="type-search__list"> <select multiple="multiple" class="chauffage">
+                        <option value="0">Individuel</option>
+                        <option value="1">Central</option>
+                        <option value="2">Électrique</option>
+                        <option value="3">Gaz</option>
+                        <option value="3">Fuel</option>
+                        <option value="3">Radiateur</option>
+                        <option value="3">Sol</option>
+                    </select> </div>
+                            <div class="type-search__list"> <select multiple="multiple" class="exposition">
+                        <option value="0">Achat</option>
+                        <option value="1">Location</option>
+                        <option value="2">Vendu récemment</option>
+                        <option value="3">Loué récemment</option>
+                    </select> </div>
+                            <div class="type-search__list"> <select multiple="multiple" class="autres-pieces">
+                        <option value="0">Achat</option>
+                        <option value="1">Location</option>
+                        <option value="2">Vendu récemment</option>
+                        <option value="3">Loué récemment</option>
+                    </select> </div>
+                            <div class="type-search__list"> <button class="btn btn-surface-terrain">Surface terrain</button>
+                                <div class="frame-surface-terrain">
+                                    <div class="frame-surface-terrain__inner">
+                                        <div class="wrap-input-price"> <input class="input-price" placeholder="m2"> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-hide-mobile">
+                        <div class="mobile__plus"> <button class="btn btn-de-criteres">
+                    <span class="plus-minus"></span>de critères
+                    
+                    
+                </button> </div>
+                        <div class="mobile__alerte"> <a href="" class="btn btn-alerte"><span>Créer une alerte</span> <i class="icon-alarm"></i></a> </div>
+                    </div>
+                </div>
+                <div class="content-search">
+                    <div class="content-search__tabs">
+                        <div class="content-search__tab"> <a href="#contentlist"><i class="icon-list"></i></a> </div>
+                        <div class="content-search__tab"> <a href="#contentmap"><i class="icon-location"></i></a> </div>
+                    </div>
+                    <div class="content-search__main">
+                        <div class="content-search__left contenttab" id="contentmap">
+                            <div class="map"> <img src="../images/map.jpg" alt=""> </div>
+                        </div>
+                        <div class="content-search__right contenttab" id="contentlist">
+                            <div class="search-title">
+                                <div class="search-title__left">
+                                    <div class="title">Maison à vendre à Paris</div>
+                                    <div class="sum-result">12 résultats</div>
+                                </div>
+                                <div class="search-title__right">
+                                    <div class="type-search__list highlight-label">
+                                        <div class="checkbox"> <input checked="" type="checkbox" name="field_highlight_label" id="field_highlight_label_vendu" value="vendu"> <label class="form-check-label" for="field_highlight_label_vendu">Vendu</label> </div>
+                                        <div class="checkbox">
+                                        <input checked="" type="checkbox" name="field_highlight_label" id="field_highlight_label_envente" value="envente"> <label class="form-check-label" for="field_highlight_label_envente">En vente</label> </div>
+                                    </div>
+                                    <select>
+                            <option value="0" selected>Par défaut</option>
+                            <option value="1">Prix croissant</option>
+                            <option value="2">Du plus récent au moins récent</option>
+                        </select> </div>
+                            </div>
+                            <div class="list-search">
+                                <div class="list-search__item">
+                                    <div class="list-search__item__left"> <a href="" class="link-over"></a>
+                                        <div class="all-label">
+                                            <div class="prix-baisse">Prix en baisse</div>
+                                        </div>
+                                        <div class="image"> <img src="../images/img-result-search.jpg" alt=""> </div>
+                                        <div class="content">
+                                            <div class="price"> <span>702 000 €</span> (7 201 €/m2) </div>
+                                            <div class="short-des">Appartement • Paris, 75020 • Cambronne 3 pièces • 70 m2</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-search__item__right">
+                                        <div class="item-top">
+                                            <div class="image"> <img src="../images/avatar.jpg" alt=""> </div>
+                                            <div class="des-right">
+                                                <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                                <div class="name">Farah Falconi</div>
+                                                <div class="price-vote">
+                                                    <div class="price">4,56</div>
+                                                    <div class="vote">
+                                                        <div class="star StarRating">
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="three-col">
+                                                <div class="title">3</div>
+                                                <div class="text">pièce(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">2</div>
+                                                <div class="text">chambre(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">70</div>
+                                                <div class="text">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <div class="item-bottom__left">
+                                                <div class="inner">
+                                                    <div class="depuis">Sur EZI-X depuis: </div>
+                                                    <div class="jours">10 jours</div>
+                                                </div>
+                                            </div>
+                                            <div class="item-bottom__right"> <a href="" class="btn btn-detail">Détails</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-search__item">
+                                    <div class="list-search__item__left"> <a href="" class="link-over"></a>
+                                        <div class="all-label">
+                                            <div class="nouveau">Nouveau</div>
+                                            <div class="prix-baisse">Prix en baisse</div>
+                                        </div>
+                                        <div class="image"> <img src="../images/img-result-search2.jpg" alt=""> </div>
+                                        <div class="content">
+                                            <div class="price"> <span>702 000 €</span> (7 201 €/m2) </div>
+                                            <div class="short-des">Appartement • Paris, 75020 • Cambronne 3 pièces • 70 m2</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-search__item__right">
+                                        <div class="item-top">
+                                            <div class="image"> <img src="../images/avatar.jpg" alt=""> </div>
+                                            <div class="des-right">
+                                                <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                                <div class="name">Farah Falconi</div>
+                                                <div class="price-vote">
+                                                    <div class="price">4,56</div>
+                                                    <div class="vote">
+                                                        <div class="star StarRating">
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="three-col">
+                                                <div class="title">3</div>
+                                                <div class="text">pièce(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">2</div>
+                                                <div class="text">chambre(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">70</div>
+                                                <div class="text">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <div class="item-bottom__left">
+                                                <div class="depuis">Sur EZI-X depuis: </div>
+                                                <div class="jours">10 jours</div>
+                                            </div>
+                                            <div class="item-bottom__right"> <a href="" class="btn btn-detail">Détails</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-search__item">
+                                    <div class="list-search__item__left"> <a href="" class="link-over"></a>
+                                        <div class="all-label">
+                                            <div class="urgent">Urgent</div>
+                                            <div class="prix-baisse">Prix en baisse</div>
+                                        </div>
+                                        <div class="image"> <img src="../images/img-result-search3.jpg" alt=""> </div>
+                                        <div class="content">
+                                            <div class="price"> <span>702 000 €</span> (7 201 €/m2) </div>
+                                            <div class="short-des">Appartement • Paris, 75020 • Cambronne 3 pièces • 70 m2</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-search__item__right">
+                                        <div class="item-top">
+                                            <div class="image"> <img src="../images/avatar.jpg" alt=""> </div>
+                                            <div class="des-right">
+                                                <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                                <div class="name">Farah Falconi</div>
+                                                <div class="price-vote">
+                                                    <div class="price">4,56</div>
+                                                    <div class="vote">
+                                                        <div class="star StarRating">
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="three-col">
+                                                <div class="title">3</div>
+                                                <div class="text">pièce(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">2</div>
+                                                <div class="text">chambre(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">70</div>
+                                                <div class="text">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <div class="item-bottom__left">
+                                                <div class="depuis">Sur EZI-X depuis:</div>
+                                                <div class="jours">10 jours</div>
+                                            </div>
+                                            <div class="item-bottom__right"> <a href="" class="btn btn-detail">Détails</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-search__item">
+                                    <div class="list-search__item__left"> <a href="" class="link-over"></a>
+                                        <div class="all-label">
+                                            <div class="vendu">Vendu</div>
+                                            <div class="prix-baisse">Prix en baisse</div>
+                                        </div>
+                                        <div class="image"> <img src="../images/img-result-search.jpg" alt=""> </div>
+                                        <div class="content">
+                                            <div class="price"> <span>702 000 €</span> (7 201 €/m2) </div>
+                                            <div class="short-des">Appartement • Paris, 75020 • Cambronne 3 pièces • 70 m2</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-search__item__right">
+                                        <div class="item-top">
+                                            <div class="image"> <img src="../images/avatar.jpg" alt=""> </div>
+                                            <div class="des-right">
+                                                <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                                <div class="name">Farah Falconi</div>
+                                                <div class="price-vote">
+                                                    <div class="price">4,56</div>
+                                                    <div class="vote">
+                                                        <div class="star StarRating">
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="three-col">
+                                                <div class="title">3</div>
+                                                <div class="text">pièce(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">2</div>
+                                                <div class="text">chambre(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">70</div>
+                                                <div class="text">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <div class="item-bottom__left">
+                                                <div class="depuis">Sur EZI-X depuis: </div>
+                                                <div class="jours">10 jours</div>
+                                            </div>
+                                            <div class="item-bottom__right"> <a href="" class="btn btn-detail">Détails</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-search__item">
+                                    <div class="list-search__item__left"> <a href="" class="link-over"></a>
+                                        <div class="all-label">
+                                            <div class="coup-de-coeur">Bien coup de cœur</div>
+                                            <div class="vendu">Vendu</div>
+                                        </div>
+                                        <div class="image"> <img src="../images/img-result-search3.jpg" alt=""> </div>
+                                        <div class="content">
+                                            <div class="price"> <span>702 000 €</span> (7 201 €/m2) </div>
+                                            <div class="short-des">Appartement • Paris, 75020 • Cambronne 3 pièces • 70 m2</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-search__item__right">
+                                        <div class="item-top">
+                                            <div class="image"> <img src="../images/avatar.jpg" alt=""> </div>
+                                            <div class="des-right">
+                                                <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                                <div class="name">Farah Falconi</div>
+                                                <div class="price-vote">
+                                                    <div class="price">4,56</div>
+                                                    <div class="vote">
+                                                        <div class="star StarRating">
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="three-col">
+                                                <div class="title">3</div>
+                                                <div class="text">pièce(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">2</div>
+                                                <div class="text">chambre(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">70</div>
+                                                <div class="text">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <div class="item-bottom__left">
+                                                <div class="depuis">Sur EZI-X depuis: </div>
+                                                <div class="jours">10 jours</div>
+                                            </div>
+                                            <div class="item-bottom__right"> <a href="" class="btn btn-detail">Détails</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-search__item">
+                                    <div class="list-search__item__left"> <a href="" class="link-over"></a>
+                                        <div class="all-label">
+                                            <div class="vendu">Vendu</div>
+                                            <div class="nouveau">Nouveau</div>
+                                        </div>
+                                        <div class="image"> <img src="../images/img-result-search3.jpg" alt=""> </div>
+                                        <div class="content">
+                                            <div class="price"> <span>702 000 €</span> (7 201 €/m2) </div>
+                                            <div class="short-des">Appartement • Paris, 75020 • Cambronne 3 pièces • 70 m2</div>
+                                        </div>
+                                    </div>
+                                    <div class="list-search__item__right">
+                                        <div class="item-top">
+                                            <div class="image"> <img src="../images/avatar.jpg" alt=""> </div>
+                                            <div class="des-right">
+                                                <div class="publie">Publié par un <span>partenaire EZI-X</span></div>
+                                                <div class="name">Farah Falconi</div>
+                                                <div class="price-vote">
+                                                    <div class="price">4,56</div>
+                                                    <div class="vote">
+                                                        <div class="star StarRating">
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starFullSvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starHalfSvg"><svg class="SvgIcon rfSvg rating-half"><svg viewBox="0 0 24 24"><path class="rating-half-Right Right" fill-rule="evenodd" clip-rule="evenodd" d="M12 19.46l6.968 3.663a.25.25 0 0 0 .363-.264L18 15.1l5.637-5.495a.25.25 0 0 0-.138-.426l-7.791-1.132L12.224.988a.246.246 0 0 0-.223-.139L12 19.46z"></path><path class="rating-half-Left Left" fill-rule="evenodd" clip-rule="evenodd" d="M8.292 8.047L.501 9.179a.25.25 0 0 0-.138.426L6 15.1l-1.331 7.759a.25.25 0 0 0 .363.264L12 19.46 12.001.849a.248.248 0 0 0-.225.139L8.292 8.047"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                            <div class="starEmptySvg"><svg class="SvgIcon rfSvg rating"><svg viewBox="0 0 24 24"><path d="M8.005 8.198L.215 9.331a.25.25 0 0 0-.139.425l5.637 5.496-1.33 7.759a.25.25 0 0 0 .362.263l6.968-3.663 6.968 3.663a.25.25 0 0 0 .363-.263l-1.33-7.76 5.636-5.495a.25.25 0 0 0-.138-.425l-7.79-1.133-3.485-7.059a.25.25 0 0 0-.448 0L8.005 8.2" fill-rule="evenodd"></path></svg></svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-middle">
+                                            <div class="three-col">
+                                                <div class="title">3</div>
+                                                <div class="text">pièce(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">2</div>
+                                                <div class="text">chambre(s) </div>
+                                            </div>
+                                            <div class="three-col">
+                                                <div class="title">70</div>
+                                                <div class="text">m<sup>2</sup></div>
+                                            </div>
+                                        </div>
+                                        <div class="item-bottom">
+                                            <div class="item-bottom__left">
+                                                <div class="depuis">Sur EZI-X depuis: </div>
+                                                <div class="jours">10 jours</div>
+                                            </div>
+                                            <div class="item-bottom__right"> <a href="" class="btn btn-detail">Détails</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paging">
+                                <div class="inner">
+                                    <ul role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                                        <li class="pre" itemprop="url"><a href="#" itemprop="name"><i class="icon-arrow-left"></i></a></li>
+                                        <li class="is-active"><a href="#" class="active">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">6</a></li>
+                                        <li><a href="#">...</a></li>
+                                        <li><a href="#">18</a></li>
+                                        <li class="next"><a href="#"><i class="icon-arrow-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="../js/search.js" charset="UTF-8" defer></script>
+        </main>
+        <footer class="footer" id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+            <div class="wrapper-fullwidth">
+                <div class="footer-logos">
+                    <ul>
+                        <li> <a href="">
+                                <img src="../images/logo/logo1.png" alt="">
+                            </a> </li>
+                        <li> <a href="">
+                                <img src="../images/logo/logo2.png" alt="">
+                            </a> </li>
+                        <li> <a href="">
+                                <img src="../images/logo/logo3.png" alt="">
+                            </a> </li>
+                        <li> <a href="">
+                                <img src="../images/logo/logo4.png" alt="">
+                            </a> </li>
+                    </ul>
+                </div>
+                <div class="footer-top">
+                    <div class="logo"><img src="../images/logo-footer.png" alt=""></div>
+                    <div class="social">
+                        <ul>
+                            <li> <a href=""><i class="icon-rs-facebook"></i></a> </li>
+                            <li> <a href=""><i class="icon-rs-twitter"></i></a> </li>
+                            <li> <a href=""><i class="icon-rs-instagram"></i></a> </li>
+                            <li> <a href=""><i class="icon-rs-linkedin"></i></a> </li>
+                            <li> <a href=""><i class="icon-rs-googleplus"></i></a> </li>
+                        </ul>
+                    </div>
+                    <div class="newsletter">
+                        <form class="newsletter-form">
+                            <div class="label">Recevez la newsletter EZI-X</div>
+                            <div class="newsletter-input"> <input class="input" placeholder="Votre adresse e-mail"> <button class="button-send">M’abonner</button> </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="col-bt col-bt1">
+                        <div class="inner">
+                            <h2>EZI-X et vous</h2>
+                            <ul class="menu">
+                                <li> <a href="">Honoraires</a> </li>
+                                <li> <a href="">Acheter</a> </li>
+                                <li> <a href="">Louer</a> </li>
+                                <li> <a href="">Estimation</a> </li>
+                                <li> <a href="">Agents</a> </li>
+                                <li> <a href="">Contact</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-bt col-bt2">
+                        <div class="inner">
+                            <h2>Achat appartement Paris</h2>
+                            <ul class="menu">
+                                <li> <a href="">Achat appartement Paris 1</a> </li>
+                                <li> <a href="">Achat appartement Paris 2</a> </li>
+                                <li> <a href="">Achat appartement Paris 3</a> </li>
+                                <li> <a href="">Achat appartement Paris 4</a> </li>
+                                <li> <a href="">Achat appartement Paris 5</a> </li>
+                                <li> <a href="">Achat appartement Paris 6</a> </li>
+                                <li> <a href="">Achat appartement Paris 1</a> </li>
+                                <li> <a href="">Achat appartement Paris 2</a> </li>
+                                <li> <a href="">Achat appartement Paris 3</a> </li>
+                                <li> <a href="">Achat appartement Paris 4</a> </li>
+                                <li> <a href="">Achat appartement Paris 5</a> </li>
+                                <li> <a href="">Achat appartement Paris 6</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-bt col-bt2">
+                        <div class="inner">
+                            <h2>Achat appartement Petite Couronne</h2>
+                            <ul class="menu">
+                                <li> <a href="">Achat appartement Issy-Les-Moulinaux</a> </li>
+                                <li> <a href="">Achat appartement Vanves</a> </li>
+                                <li> <a href="">Achat appartement Malakoff</a> </li>
+                                <li> <a href="">Achat appartement Montrouge</a> </li>
+                                <li> <a href="">Achat appartement Gentilly</a> </li>
+                                <li> <a href="">Achat appartement Le Kremlin-Bicêtre</a> </li>
+                                <li> <a href="">Achat appartement Issy-Les-Moulinaux</a> </li>
+                                <li> <a href="">Achat appartement Vanves</a> </li>
+                                <li> <a href="">Achat appartement Malakoff</a> </li>
+                                <li> <a href="">Achat appartement Montrouge</a> </li>
+                                <li> <a href="">Achat appartement Gentilly</a> </li>
+                                <li> <a href="">Achat appartement Le Kremlin-Bicêtre</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-bt col-bt2">
+                        <div class="inner">
+                            <h2>Agence immobilière Paris et Petite Couronne</h2>
+                            <ul class="menu">
+                                <li> <a href="">Agence immobilière Paris 1</a> </li>
+                                <li> <a href="">Agence immobilière Paris 2</a> </li>
+                                <li> <a href="">Agence immobilière Paris 3</a> </li>
+                                <li> <a href="">Agence immobilière Paris 4</a> </li>
+                                <li> <a href="">Agence immobilière Paris 5</a> </li>
+                                <li> <a href="">Agence immobilière Paris 6</a> </li>
+                                <li> <a href="">Agence immobilière Paris 1</a> </li>
+                                <li> <a href="">Agence immobilière Paris 2</a> </li>
+                                <li> <a href="">Agence immobilière Paris 3</a> </li>
+                                <li> <a href="">Agence immobilière Paris 4</a> </li>
+                                <li> <a href="">Agence immobilière Paris 5</a> </li>
+                                <li> <a href="">Agence immobilière Paris 6</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <ul>
+                        <li> <a href="">À propos</a> </li>
+                        <li> <a href="">Actualités</a> </li>
+                        <li> <a href="">Nous rejoindre</a> </li>
+                        <li> <a href="">FAQ</a> </li>
+                        <li> <a href="">Mentions légales</a> </li>
+                        <li> <a href="">CGU</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
