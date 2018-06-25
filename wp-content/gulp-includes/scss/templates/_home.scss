@@ -96,6 +96,7 @@
     @media screen and (min-width: $desktop-small){
       margin-bottom: 100px;
     }
+
     &--main{
       @include flex;
       text-align: center;
@@ -103,6 +104,7 @@
         background: url(../images/bg.png) left bottom no-repeat;
         background-size: 100% auto;
         padding:0 15px 15px;
+        text-align: inherit;
       }
       @media screen and (min-width: $desktop-small){
         padding:0 40px 40px;
@@ -145,6 +147,9 @@
           top: 0;
           background: #fdc816;
         }
+      }
+      @media screen and (min-width: $desktop-medium){
+        margin-top: 0;
       }
       h2{
         font-size: 25px;

@@ -86,6 +86,9 @@
       border:10px solid rgba(#FDC816, .3);
       left: 50%;
       transform: translateX(-50%);
+      span{
+        transform: rotate(-90deg);
+      }
       @media screen and (min-width: $desktop-small){
         display: none;
       }

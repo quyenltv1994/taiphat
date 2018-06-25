@@ -37,7 +37,10 @@
 		  justify-content: center;
 		  text-align: center;
 		  transition: all .5s;
-		  padding:0 70px;
+		  padding:0 15px;
+		  @media screen and (min-width: $tablet-medium){
+			padding:0 70px;
+		  }
 		  .title{
 			font-size: 20px;
 			font-weight: 600;
