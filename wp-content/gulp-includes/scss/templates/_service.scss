@@ -1,5 +1,9 @@
 .service{
   margin-bottom: 63px;
+  padding:0 15px;
+  @media screen and (min-width: $tablet-small){
+	padding:0;
+  }
 	&__main{
 	  margin-left: -12px;
 	  margin-right: -12px;

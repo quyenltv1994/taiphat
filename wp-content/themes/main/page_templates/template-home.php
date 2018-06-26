@@ -2,32 +2,21 @@
 /*
 Template Name: Home Template
 */
-get_header(); 
+get_header();
 ?>
-<div id="main-content" class="main-content woocommerce home-page-template">
-	<!--  Slider Home Page -->
-	<div class="mypc-home-slider">
-		<?php get_template_part( 'template_part/home', 'slider' );?>
+	<div class="banner">
+		<?php
+		get_template_part('template_part/slider_home');
+		?>
 	</div>
-	<!-- About US -->
-	<div class="mypc-about-us">
-		<?php get_template_part( 'template_part/about', 'us' );?>
+	<div class="slogan__home">
+		<?php
+			get_template_part('template_part/slogan_home');
+		?>
 	</div>
-	<!-- Projet Featured -->
-	<div class="mypc-project-featured">
-		<?php get_template_part('template_part/project','featured') ?>
+	<div class="service">
+		<?php
+		get_template_part('template_part/service');
+		?>
 	</div>
-	<!-- Price Project -->
-	<div class="mypc-project-price">
-		<?php get_template_part('template_part/project','price') ?>
-	</div>
-	<!-- Table Price -->
-	<div class="mypc-table-price">
-		<?php get_template_part('template_part/table','price') ?>
-	</div>
-	<!-- New Vietlandvn -->
-	<div class="mypc-new">
-		<?php get_template_part('template_part/new'); ?>
-	</div>
-</div>
 <?php get_footer(); ?>

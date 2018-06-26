@@ -194,7 +194,7 @@
 			add_image_size('image_size_medium',420,250,true);
 			add_image_size('image_size_large',780,465,true);
 			add_image_size('image_size_testimonial',100,100,true);
-			add_image_size('image_size_project',600,420,true);
+			add_image_size('image_size_gt',529,621,true);
 			add_image_size('image_size_post',700,360,true);
 			add_image_size('image_size_post_second',450,305,true);
 			add_image_size('image_size_service',390,550,true);

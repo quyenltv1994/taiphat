@@ -147,7 +147,7 @@
       text-align: center;
       font-weight: bold;
       display: inline-block;
-      @media screen and (min-width: $desktop-small){
+      @media screen and (min-width: $tablet-small){
         width: 50%;
       }
       @media screen and (min-width: $desktop-medium){
@@ -180,7 +180,7 @@
       line-height: 60px;
       font-size: 15px;
       text-align: center;
-      @media screen and (min-width: $desktop-small){
+      @media screen and (min-width: $tablet-small){
         width: 50%;
       }
       a{

@@ -137,7 +137,10 @@
       text-align: inherit;
     }
     @media screen and (min-width: $tablet-medium){
-      left:0;
+      left:50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1200px;
     }
     &--content{
       display: inline-block;
@@ -202,7 +205,7 @@
       line-height: 20px;
       @media screen and (min-width: $tablet-medium2) {
         text-align: inherit;
-        margin-top: 75px;
+        margin-top: 0;
         width: 45%;
         &:before{
           content: "";
@@ -215,7 +218,7 @@
         }
       }
       @media screen and (min-width: $desktop-medium){
-        margin-top: 0;
+        margin-top: 75px;
       }
       h2{
         font-size: 25px;
