@@ -61,6 +61,7 @@
 			</div>
 			<div class="header__right">
 				<div class="tele">
+					<div>
 					<?php
 					$count = count( get_field('phone_number', 'option') );
 					$i = 0;
@@ -77,9 +78,12 @@
 							endwhile;
 						endif;
 					?>
+						</div>
 				</div>
 				<div class="email">
-					<a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>
+					<div>
+						<a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>
+						</div>
 				</div>
 			</div>
 		</div>

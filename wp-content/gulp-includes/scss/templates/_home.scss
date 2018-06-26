@@ -19,20 +19,61 @@
       }
       &__item{
         &--content{
-          width: 510px;
-          height:130px;
-          padding:38px 45px;
-          font-size: 30px;
+          padding:20px 30px;
+          font-size: 17px;
           color:$white;
           font-weight: 700;
           background: rgba($dark, .5);
+          margin-right: 0;
+          @media screen and (min-width: $tablet-small){
+            width: 300px;
+          }
+          @media screen and (min-width: $tablet-medium){
+            font-size: 24px;
+            width: 400px;
+          }
+          @media screen and (min-width: $desktop-small){
+            width: 510px;
+            font-size: 30px;
+            padding:38px 45px;
+          }
+        }
+      }
+    }
+    .flex-direction-nav{
+      .flex-prev{
+        width: 26px;
+        height:26px;
+        background: url(../images/prev.png) no-repeat;
+        display: inline-block;
+        transform: translateY(-50%);
+        top:60%;
+        @media screen and (min-width: $tablet-medium2){
+          left:-85px;
+        }
+        &:before{
+          content: "";
+        }
+      }
+      .flex-next{
+        width: 16px;
+        height:26px;
+        top:60%;
+        background: url(../images/next.png) no-repeat;
+        display: inline-block;
+        transform: translateY(-50%);
+        &:before{
+          content: "";
         }
       }
     }
     .flex-control-nav{
       width: auto;
       right:10%;
-      bottom: 45px;
+      bottom: 20px;
+      @media screen and (min-width: $tablet-medium){
+        bottom: 45px;
+      }
       li{
         padding:4px;
         position: relative;
@@ -82,19 +123,44 @@
   }
   &__item{
     position: absolute;
-    bottom: 0;
-    left:0;
-    right:0;
+    top:50%;
+    left:50%;
+    width: 80%;
+    text-align: center;
+    transform: translate(-50%);
+    @media screen and (min-width: $tablet-small){
+      bottom: 0;
+      left:15px;
+      transform: translate(0);
+      top:auto;
+      width: auto;
+      text-align: inherit;
+    }
+    @media screen and (min-width: $tablet-medium){
+      left:0;
+    }
     &--content{
       display: inline-block;
     }
   }
 }
+.flexslider:hover .flex-direction-nav .flex-prev{
+  @media screen and (min-width: $tablet-medium2) {
+    left: 85px;
+  }
+}
+.flexslider:hover .flex-direction-nav .flex-next{
+  @media screen and (min-width: $tablet-medium2) {
+    right: 85px;
+  }
+}
 .slogan{
   &__home{
     margin-bottom: 75px;
+    padding:0 15px;
     @media screen and (min-width: $desktop-small){
       margin-bottom: 100px;
+      padding:0;
     }
 
     &--main{

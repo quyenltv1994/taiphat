@@ -8,9 +8,29 @@
 
         $('.flexslider').flexslider({
             animation: "slide",
-            prevText: "<i class='fal fa-angle-right'></i>",
-            nextText: "<i class='fal fa-angle-right'></i>",
+            prevText: "",
+            nextText: "",
         });
+        if($(window).width() > 1023){
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 0){
+                    $(".header").addClass("scroll_top");
+                }else{
+                    $(".header").removeClass("scroll_top");
+                }
+            });
+        }
+
+        if($(window).width() < 992){
+            $(window).scroll(function(){
+                if($(window).scrollTop() > 0){
+                    $(".header").addClass("scroll_mobile");
+                }else{
+                    $(".header").removeClass("scroll_mobile");
+                }
+            });
+        }
+
         $('.flexslider .flex-control-paging li').each(function( index ) {
             $(this).append("<span></span>");
         });

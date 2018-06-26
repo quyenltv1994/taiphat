@@ -1,6 +1,6 @@
 .footer{
   &__top{
-    padding:50px 0;
+    padding:50px 0 0;
     background: #F3F3F4;
     @media screen and (min-width: $tablet-medium){
       padding:50px 0 60px;
@@ -9,25 +9,32 @@
       &>p:first-child{
         font-size: 20px;
         font-weight: 300;
-        padding-left: 20px;
         text-align: center;
         @media screen and (min-width: $tablet-medium2) {
           text-align: inherit;
+          padding-left: 20px;
         }
       }
     }
     &--main{
       @include flex;
       flex-wrap: wrap;
-      padding:10px 0;
+      margin:20px 0;
+      @media screen and (min-width: $tablet-small) {
+        padding: 10px 0;
+      }
       .tele {
         width: 100%;
         color: $dark;
-        font-size: 25px;
+        font-size: 18px;
         font-family: $font-2;
         font-weight: 700;
-        line-height: 60px;
+        line-height: 40px;
         text-align: center;
+        @media screen and (min-width: $tablet-small){
+          font-size: 25px;
+          line-height: 60px;
+        }
         @media screen and (min-width: $tablet-medium) {
           display: inline-block;
         }
@@ -37,16 +44,24 @@
         div{
           position: relative;
           display: inline-block;
-          padding-left: 40px;
+          padding-left: 30px;
+          @media screen and (min-width: $tablet-small){
+            padding-left: 40px;
+          }
           &:before{
             content:"";
-            background-image: url(../images/tele-icon-footer.png);
+            background-image: url(../images/tele-icon-footer-mobile.png);
             background-repeat: no-repeat;
             width: 31px;
             height:31px;
             position: absolute;
-            top:15px;
-            left:0;
+            top:10px;
+            left:5px;
+            @media screen and (min-width: $tablet-small){
+              top:15px;
+              left:0;
+              background-image: url(../images/tele-icon-footer.png);
+            }
           }
         }
       }
@@ -56,25 +71,39 @@
         font-family: $font-2;
         color:$dark;
         font-weight: 300;
-        font-size: 25px;
-        line-height: 60px;
+        font-size: 18px;
+        line-height: 40px;
         text-align: center;
+        @media screen and (min-width: $tablet-small){
+          font-size: 25px;
+          line-height: 60px;
+        }
         @media screen and (min-width: $tablet-medium2) {
           width: 50%;
         }
         div{
           position: relative;
           display: inline-block;
-          padding-left: 50px;
+          padding-left: 30px;
+          @media screen and (min-width: $tablet-small){
+            padding-left: 50px;
+          }
+          a{
+            text-decoration: underline;
+          }
           &:before{
             content:"";
-            background-image: url(../images/email-icon-foot.png);
+            background-image: url(../images/email-icon-foot-mobile.png);
             background-repeat: no-repeat;
             width: 40px;
             height:31px;
             position: absolute;
             top:15px;
             left:0;
+            @media screen and (min-width: $tablet-small){
+              top:15px;
+              background-image: url(../images/email-icon-foot.png);
+            }
           }
         }
         a{
@@ -102,7 +131,7 @@
         justify-content: space-between;
         align-items: center;
         padding:0 35px 0 20px;
-        margin:0 auto 20px;
+        margin:0 auto 30px;
         width: 300px;
         @media screen and (min-width: $desktop-small){
           margin:0;
@@ -135,7 +164,7 @@
           width: 100%;
           line-height: 20px;
           text-align: center;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
           @media screen and (min-width: $tablet-medium){
             width: 260px;
             text-align: inherit;
@@ -143,21 +172,48 @@
           }
         }
         .form{
-          padding-right: 15px;
+          padding:0 15px;
           @media screen and (min-width: $tablet-small){ 
             width: 100%;
             margin:0 auto;
+            padding-right: 15px;
           }
           @media screen and (min-width: $tablet-medium){
             width: calc(100% - 260px);
           }
+          form{
+            position: relative;
+            p{
+              @include flex;
+              flex-wrap: wrap;
+              position: relative;
+              .wpcf7-form-control-wrap{
+                width: 100%;
+                @media screen and (min-width: $tablet-small){
+                  width: calc(100% - 100px);
+                  height:45px;
+                }
+              }
+              .ajax-loader{
+                position: absolute;
+                right: -30px;
+                top: 15px;
+              }
+            }
+          }
           input[type='email']{
-            width: calc(100% - 134px);
+            width: 100%;
             height:45px;
             border:1px solid $dark;
             background: $white;
-            margin:0 15px;
             padding:0 10px;
+            max-width: 300px;
+            margin:0 auto;
+            display: inherit;
+            @media screen and (min-width: $tablet-small){
+              max-width: none;
+              padding:0;
+            }
           }
           input[type='submit']{
             font-size: 13px;
@@ -169,9 +225,19 @@
             line-height: 45px;
             background: $dark;
             transition: all 1s;
+            margin:15px auto 0;
             &:hover{
               background: rgba($dark, .9);
             }
+            @media screen and (min-width: $tablet-small){
+              margin:inherit;
+              display: inline-block;
+            }
+          }
+          .wpcf7-response-output{
+            position: absolute;
+            left: -7px;
+            top: -56px;
           }
         }
       }
@@ -192,8 +258,10 @@
       @include flex;
       flex-wrap: wrap;
       font-size: 12px;
+      padding:0 15px;
       @media screen and (min-width: $tablet-small){
         font-size: 13px;
+        padding:0;
       }
       .company__name{
         font-weight: 600;

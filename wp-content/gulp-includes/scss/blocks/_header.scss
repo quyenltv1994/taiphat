@@ -25,30 +25,50 @@
     width: 67px;
     text-align: center;
     position: absolute;
-    top:60px;
+    top:120px;
     left:20px;
+    @media screen and (min-width: $tablet-small){
+      top:60px;
+    }
     @media screen and (min-width: $desktop-small) {
-      width: 118px;
       position: relative;
       z-index: 10;
       left:auto;
       top:auto;
+      width: calc(100% - 450px - 500px);
     }
     @media screen and (min-width: $desktop-medium) {
-      width: 295px;
+      width: 300px
     }
     a {
       display: block;
       height: 60px;
-      padding-top: 10px;
+      transition: all 1s;
+      width: 80px;
+      margin:0 auto;
+      padding:5px 0;
       img {
         display: block;
+        transition: all 1s;
         margin: 0 auto;
+      }
+      @media screen and (min-width: $desktop-small){
+        padding-top: 15px;
+        padding-left: 15px;
+        width: 121px;
       }
     }
   }
   &__menu {
     float: left;
+    width: 100%;
+    @media screen and (min-width: $tablet-medium){
+      max-width: 450px;
+      padding-left: 5%;
+    }
+    @media screen and (min-width: $desktop-medium) {
+      max-width: calc(100% - 300px - 560px);
+    }
     .mon-espace-mobile {
       border-bottom: 0;
       &__inner {
@@ -82,12 +102,15 @@
     .read__article{
       position: absolute;
       z-index: 11;
-      top: 115px;
+      top: 365px;
       border:10px solid rgba(#FDC816, .3);
       left: 50%;
       transform: translateX(-50%);
       span{
         transform: rotate(-90deg);
+      }
+      @media screen and (min-width: $tablet-small){
+        top: 115px;
       }
       @media screen and (min-width: $desktop-small){
         display: none;
@@ -100,39 +123,110 @@
     z-index: 10;
     @include opacity(1);
     @include transition (opacity 0.3s ease-out);
-    height:60px;
-    max-width: 560px;
     width: 100%;
     @include flex;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
+    background: $white;
+    @media screen and (min-width: $tablet-medium2){
+      max-width: 500px;
+      flex-direction: row;
+      background: transparent;
+      height:60px;
+    }
+    @media screen and (min-width: $desktop-medium){
+      max-width: 560px;
+    }
     .tele {
-      width: 50%;
+      width: 100%;
       background-color: rgba(#FDC816, .8);
       color: $dark;
-      font-size: 15px;
+      font-size: 14px;
       font-family: $font-2;
       line-height: 60px;
       text-align: center;
       font-weight: bold;
-      padding-left: 15px;
-      background-image: url(../images/tele-icon.png);
-      background-position: 20px center;
-      background-repeat: no-repeat;
       display: inline-block;
+      @media screen and (min-width: $desktop-small){
+        width: 50%;
+      }
+      @media screen and (min-width: $desktop-medium){
+        background-position: 20px center;
+        font-size: 15px;
+      }
+      div{
+        position: relative;
+        display: inline-block;
+        padding-left: 20px;
+        &:before{
+          content:"";
+          background-image: url(../images/tele-icon.png);
+          background-repeat: no-repeat;
+          width: 19px;
+          height:13px;
+          position: absolute;
+          top:24px;
+          left:0;
+        }
+      }
     }
     .email {
-      width: 50%;
+      width: 100%;
       background-color: rgba(#FDC816, .3);
-      background-image: url(../images/email-icon.png);
-      background-position: 30px center;
-      background-repeat: no-repeat;
-      padding-left: 25px;
       display: inline-block;
       color:$dark;
       font-family: $font-2;
       font-weight: 300;
       line-height: 60px;
+      font-size: 15px;
       text-align: center;
+      @media screen and (min-width: $desktop-small){
+        width: 50%;
+      }
+      a{
+        text-decoration: underline;
+      }
+      div{
+        position: relative;
+        display: inline-block;
+        padding-left: 25px;
+        &:before{
+          content:"";
+          background-image: url(../images/email-icon.png);
+          background-repeat: no-repeat;
+          width: 19px;
+          height:13px;
+          position: absolute;
+          top:24px;
+          left:0;
+        }
+      }
+    }
+  }
+  &.scroll_top{
+    height:61px;
+    border-bottom:1px solid rgba(#333, .3);
+    .header__logo{
+      top:-6px;
+      a{
+        width: 100px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+  &.scroll_mobile{
+    transform: translateY(-120px);
+    @media screen and (min-width: $tablet-small){
+      transform: translateY(-60px);
+    }
+    .wrapper-fullwidth{
+      height:210px;
+      background: $white;
+      border-bottom:1px solid rgba(#333, .3);
+      @media screen and (min-width: $tablet-small){
+        height:150px;
+      }
     }
   }
 }
