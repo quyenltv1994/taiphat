@@ -24,7 +24,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="home">
 <div id="main" class="main">
 	<header id="header" class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 		<div class="button__menu-container">

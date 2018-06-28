@@ -9,7 +9,7 @@
  */
 ?>
 </main>
-	<div class="footer__top">
+	<div class="footer__top" id="lien_he">
 		<div class="wrapper">
 			<div class="footer__top--container">
 				<p>Liên hệ chúng tôi ngay hôm nay</p>
